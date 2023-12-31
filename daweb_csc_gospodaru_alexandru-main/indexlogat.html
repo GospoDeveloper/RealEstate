@@ -1,0 +1,170 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <!-- legatura css-->
+      <link rel="stylesheet" type="text/css" href="styles.css" />
+      <!-- FONTURI-->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <title>Elyos Imobiliare</title>
+    </head>
+    <body>
+      <div id="acasa">
+        <!-- NAVBARUL -->
+        <nav class="navbar" id="navbar">
+          <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </a>
+          <div class="brand">Elyos Imobiliare</div>
+          <ul class="meniu">
+            <li><a href="#acasa">Acasa</a></li>
+            <li><a href="#despre">Despre Noi</a></li>
+            <li class="dropbtn">
+              <a href="inchirieri.html">Inchirieri</a>
+              <div class="dropdown-content">
+                <a href="apartamentelogat.php">Apartamente</a>
+                <a href="inchirieri.html#case">Case</a>
+                <a href="inchirieri.html#spatii">Spatii comerciale</a>
+              </div>
+            </li>
+            <li class="dropbtn">
+              <a href="vanzari.html">Vanzari</a>
+              <div class="dropdown-content">
+                <a href="vanzari.html">Apartamente</a>
+                <a href="vanzari.html">Case</a>
+                <a href="vanzari.html">Spatii comerciale</a>
+              </div>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Profil</a></li>
+            <li class="spatiu-login"><a class="btn-login">Logout</a></li>
+          </ul>
+        </nav>
+
+        <!-- main page -->
+        <div class="top-container">
+          <h1>Cele mai avantajoase preturi din zona</h1>
+          <p>Seriozitate maxima</p>
+        </div>
+        <div class="login">
+          <form class="login-form" method="post" action="login.php">
+            <label>Utilizator</label>
+            <input type="email" placeholder="nume@gmail.com" name="email" />
+            <label>Parola</label>
+            <input type="password" placeholder="parola" name="parola" />
+            <button
+              type="submit"
+              class="btn-submit"
+              id="btn-logare"
+              name="submit"
+            >
+              Logare
+            </button>
+            <label>Nu aveti cont?</label>
+            <button id="btn-register" class="btn-submit">Inregistrare</button>
+          </form>
+        </div>
+        <div class="register displayNone">
+          <form class="register-form" method="post" action="register.php">
+            <label>Nume</label>
+            <input type="text" placeholder="nume" name="nume" />
+            <label>Email</label>
+            <input type="email" placeholder="nume@gmail.com" name="email" />
+            <label>Parola</label>
+            <input type="password" placeholder="parola" name="parola" />
+            <button
+              type="submit"
+              class="btn-submit"
+              id="creeare-cont"
+              name="submit"
+            >
+              Creeaza cont
+            </button>
+            <label class="lbl-aveti">Aveti cont?</label>
+            <button class="btn-submit" id="redirectionare">Logare</button>
+          </form>
+        </div>
+        <a class="down" href="#despre"></a>
+      </div>
+      <hr />
+      <!-- middle container despre noi -->
+      <div class="middle-container" id="despre">
+        <h1 class="viziuneh1">Viziunea noastra</h1>
+        <div class="inner-container">
+          <div class="echipa">
+            <img src="broker.jpeg" class="img-broker" />
+            <p>Suport complet in completarea tuturor actelor necesare</p>
+            <p>Investiti timpul bine</p>
+          </div>
+          <div class="clienti">
+            <img src="clienti.jpg" class="img-clienti" />
+            <p>Ne dedicam 100% timpului tau</p>
+            <p>Clientii nostri sunt satisfacuti 100%</p>
+          </div>
+          <div class="zone">
+            <img src="zone.jpg" class="img-zone" />
+            <p>Fie ca vrei o locuinta langa natura sau in oras</p>
+            <p>Avem o gama variata de zone</p>
+          </div>
+        </div>
+        <a class="down" href="#contact"></a>
+      </div>
+      <hr />
+      <div class="bottom-container" id="contact">
+        <h1>Contact</h1>
+        <!-- contact form -->
+        <div class="contact-form">
+          <form method="post">
+            <label id="lbl-nume" for="fname">Nume</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Numele tau.."
+            />
+
+            <label id="lbl-prenume" for="lname">Prenume</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Prenumele tau.."
+            />
+
+            <label for="subject">Subiect</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Scrie o parere.."
+              style="height: 200px"
+            ></textarea>
+            <input class="btn-submit" type="submit" value="Trimite" />
+          </form>
+        </div>
+        <div class="iconite">
+          <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+          <a href="https://www.twitter.com" class="fa fa-twitter"></a>
+          <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </body>
+  </html>
+</php>

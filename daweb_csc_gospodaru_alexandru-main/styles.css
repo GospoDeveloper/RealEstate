@@ -1,0 +1,406 @@
+* {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* fonturi h1 si p */
+p {
+  font-family: "Libre Baskerville", serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+/* sageata de jos prima pagina */
+.down {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.down:hover {
+  border-color: darkorange;
+}
+
+/* buttonul de hamburger */
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* prima pagina  */
+#acasa {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* navbar stilizare */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: darkorange;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+}
+
+.meniu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+
+li {
+  padding: 20px;
+}
+
+/* logoul firmei */
+.brand {
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  align-self: center;
+  justify-content: flex-start;
+}
+
+li a {
+  font-size: 1.2rem;
+  font-family: "Libre Baskerville", serif;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropbtn:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* imagine cu bacground negru rgba si z index pentru asta */
+.top-container {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  width: 70%;
+  font-weight: bold;
+  border: 1px solid #f1f1f1;
+  z-index: 2;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+}
+/* containerul din mijloc*/
+.middle-container {
+  background-image: url("middle.jpg");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inner-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* stilizare divuri cu about us */
+.echipa,
+.clienti,
+.zone {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  height: 400px;
+  align-self: center;
+  text-align: center;
+}
+
+.img-broker,
+.img-clienti,
+.img-zone {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* responsivness pentru mid container pe mobile */
+@media (max-width: 700px) {
+  .inner-container {
+    flex-direction: column;
+  }
+  .img-broker,
+  .img-clienti,
+  .img-zone {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    align-self: center;
+    padding: 10px;
+  }
+  p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 17px;
+    text-align: center;
+  }
+  .echipa,
+  .clienti,
+  .zone {
+    height: 100%;
+  }
+}
+/* responsivness pentru ecrane mici la navbar */
+@media (max-width: 700px) {
+  .brand {
+    display: none;
+  }
+  .toggle-button {
+    display: flex;
+  }
+
+  .meniu {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meniu ul {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+/* containerul de jos cu contact form  */
+
+.bottom-container {
+  background-image: url("bottom.jpg");
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+/* stilizare form  */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: space-around;
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  z-index: 2;
+  width: 50%;
+  height: 70%;
+  align-items: center;
+}
+#fname,
+#lname,
+#lbl-nume,
+#lbl-prenume {
+  width: 30%;
+  height: 25px;
+  align-self: center;
+}
+
+input,
+textarea {
+  color: black;
+  font-family: "Libre Baskerville", serif;
+}
+.btn-submit {
+  width: 40%;
+  align-self: center;
+  height: 35px;
+  padding: 5px;
+  font-family: "Libre Baskerville", serif;
+  color: white;
+  background-color: orange;
+  font-size: 20px;
+  border: none;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: darkorange;
+}
+/* stilizare contact mobile */
+@media (max-width: 700px) {
+  .contact-form {
+    width: 100%;
+  }
+  .btn-submit {
+    width: 70%;
+    height: 50px;
+  }
+  #fname,
+  #lname,
+  #lbl-nume,
+  #lbl-prenume {
+    width: 50%;
+    height: 25px;
+    align-self: center;
+  }
+}
+
+.fa {
+  padding: 20px;
+  font-size: 2rem !important;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+}
+/* tentativa de sticky navbar */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#navbar {
+  overflow: hidden;
+} */
+
+/* stilizare register */
+.register {
+  width: 400px;
+  height: 350px;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  align-self: center;
+  justify-content: center;
+}
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px;
+}
+.register-form .btn-submit {
+  width: 70%;
+}
+.lbl-aveti {
+  align-self: center;
+}
+
+/* stilizare login*/
+.login {
+  width: 400px;
+  height: 250px;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  display: none;
+  align-self: center;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+}
+
+.spatiu-login :hover {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .login {
+    width: 70%;
+  }
+}
+
+.displayNone {
+  display: none;
+}
+
+/* responsivness pentru inregistrare */
+@media (max-width: 700px) {
+  .btn-submit {
+    width: 50%;
+    height: 30px;
+  }
+}
