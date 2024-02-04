@@ -1,0 +1,46 @@
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+body {
+  background-image: url(https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+h1 {
+  align-self: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* stilizare mobile  */
+@media (max-width: 1000px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+.video-inchirieri {
+  align-self: center;
+  justify-content: center;
+  display: none;
+}
+
+.displayNone {
+  display: none;
+}
+
+.lista-apartamente-inchirieri li :hover {
+  cursor: pointer;
+}
